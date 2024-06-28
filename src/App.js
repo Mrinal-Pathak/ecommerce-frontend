@@ -12,6 +12,7 @@ import Profile from './components/Profile';
 import AdminLogin from './components/AdminLogin';
 import AdminDasboard from './components/AdminDasboard';
 import AddProduct from './components/AddProduct';
+import Footer from './components/Footer';
 
 export const LoginCheck = createContext();
 export const Server=createContext();
@@ -45,7 +46,8 @@ function App() {
         <Route path="/add-product" element={<AddProduct />} />
 
       </Routes>
-
+    <div className='alert alert-danger'>This is a Demo site Not any original store</div>
+    <Footer/>
     </Router>
     </Server.Provider>
       </LoginCheck.Provider>
