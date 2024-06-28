@@ -16,12 +16,11 @@ import AddProduct from './components/AddProduct';
 export const LoginCheck = createContext();
 export const Server=createContext();
 
-// const serverUrl="http://localhost:5000"
 
 function App() {
 
   const [status, setStatus] = useState(false);
-  const [serverUrl]=useState("http://localhost:5000")
+  const [serverUrl]=useState("https://8796-2409-40e4-64-f1f6-747c-9c36-f7a8-35fc.ngrok-free.app")
 
   const updateStatus = (newValue) => {
     setStatus(newValue);
