@@ -130,7 +130,7 @@ const Cart = () => {
     async function fetchData() {
       try {
         const requestOptions = {
-          method: 'GET',
+          method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'auth-token': localStorage.getItem('token'),

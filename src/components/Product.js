@@ -58,7 +58,7 @@ const Product = () => {
 
         // POST request options
         const requestOptions = {
-          method: 'GET',
+          method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
