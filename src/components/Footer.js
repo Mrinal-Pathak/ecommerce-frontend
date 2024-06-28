@@ -129,7 +129,7 @@ const Footer = function () {
                     </svg>
                     <a style={{ color: "white" }} href="mailto:mrinalpathak456@gmail.com">mrinalpathak456@gmail.com</a>
                 </div>
-                <div><Link to="/admin-login"><p className='underline'>Admin Login</p></Link></div>
+                <div><Link to="/admin-dasboard"><p className='underline'>Admin Login</p></Link></div>
             </footer>
         </>
     )

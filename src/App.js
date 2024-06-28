@@ -46,7 +46,7 @@ function App() {
         <Route path="/add-product" element={<AddProduct />} />
 
       </Routes>
-    <div className='alert alert-danger'>This is a Demo site Not any original store</div>
+    <div className='alert alert-danger'>Disclaimer: This is a Demo site Not any original store</div>
     <Footer/>
     </Router>
     </Server.Provider>
