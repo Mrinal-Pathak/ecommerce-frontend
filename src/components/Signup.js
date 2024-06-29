@@ -7,6 +7,7 @@ const Signup = () => {
     const [info, setInfo] = useState({ name: "", phone: "", email: "", password: "", cpassword: "", address: "" })
     const navigate = useNavigate();
     const [alert, setAlert] = useState("");
+    const [showPass,setShowPass]=useState("password");
     const {serverUrl}=useContext(Server);
 
 
@@ -76,19 +77,20 @@ const Signup = () => {
 
                 <div className="col-md-6">
                     <label htmlFor="inputPassword4" className="form-label">Password</label>
-                    <input type="password" name="password" value={info.password} onChange={handleChange} className="form-control" id="inputPassword4" required minLength={6} />
+                    <input type={showPass} name="password" value={info.password} onChange={handleChange} className="form-control" id="inputPassword4" required minLength={6} />
                 </div>
                 <div className="col-md-6">
                     <label htmlFor="inputPassword4" className="form-label">Conform Password</label>
-                    <input type="password" name="cpassword" value={info.cpassword} onChange={handleChange} className="form-control" id="inputcPassword4" required minLength={6}/>
+                    <input type={showPass} name="cpassword" value={info.cpassword} onChange={handleChange} className="form-control" id="inputcPassword4" required minLength={6}/>
                 </div>
+                <div className="btn btn-success my-3" onClick={()=>{showPass==="password"?setShowPass("text"):setShowPass("password")}}>{showPass==="password"?"Show":"Hide"} Password</div>
                 <div className="col-md-6">
                     <label htmlFor="inputPhone4" className="form-label">Phone No.</label>
                     <input type="tel" name="phone" value={info.phone} onChange={handleChange} className="form-control" id="inputPhone4" required />
                 </div>
                 <div className="col-12">
                     <label htmlFor="inputAddress" className="form-label">Address</label>
-                    <input type="text" name="address" value={info.address} onChange={handleChange} className="form-control" id="inputAddress" placeholder="Enter Address Here" required minLength={6}/>
+                    <input type="text" name="address" value={info.address} onChange={handleChange} className="form-control" id="inputAddress" placeholder="Enter Address Here" required minLength={3}/>
                 </div>
 
 

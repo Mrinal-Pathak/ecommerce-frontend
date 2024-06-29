@@ -96,7 +96,6 @@ const Cart = () => {
         },
 
       };
-      // console.log(props.serverUrl)
       // Make the POST request
       const response = await fetch(`${serverUrl}/api/cart/removefromcart/${cartItem[index]._id}`, requestOptions);
 

@@ -94,7 +94,7 @@ const Product = () => {
 
   return (
     <>
-      {alert&&(<div id="alert" class={`alert alert-success d-flex justify-content-center `} role="alert">
+      {alert&&(<div id="alert" className={`alert alert-success d-flex justify-content-center `} role="alert">
         Added to Cart!
       </div>)}
       <div className="container d-flex flex-wrap my-5">

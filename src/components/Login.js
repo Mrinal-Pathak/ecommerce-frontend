@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { LoginCheck,Server } from '../App';
+import { LoginCheck, Server } from '../App';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -7,8 +7,9 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [alert, setAlert] = useState(false);
+  const [showPass,setShowPass]=useState("password");
   const navigate = useNavigate();
-  const {serverUrl}=useContext(Server);
+  const { serverUrl } = useContext(Server);
 
 
   const handleEmail = (e) => {
@@ -70,10 +71,13 @@ const Login = () => {
             <label for="floatingInput">Email address</label>
           </div>
           <div class="form-floating">
-            <input type="password" className="form-control" onChange={handlePassword} value={password} id="floatingPassword" placeholder="Password" minLength={6} />
+            <input type={showPass} className="form-control" onChange={handlePassword} value={password} id="floatingPassword" placeholder="Password" minLength={6} />
             <label for="floatingPassword">Password</label>
+            
+            <div className="btn btn-success my-3" onClick={()=>{showPass==="password"?setShowPass("text"):setShowPass("password")}}>{showPass==="password"?"Show":"Hide"} Password</div>
           </div>
 
+          
 
           <button type="submit" className="btn btn-primary my-3" >Login</button>
         </form>
