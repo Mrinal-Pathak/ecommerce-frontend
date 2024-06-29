@@ -21,7 +21,7 @@ export const Server=createContext();
 function App() {
 
   const [status, setStatus] = useState(false);
-  const [serverUrl]=useState("https://6ed8-2409-40e4-105b-a6b6-c5c4-608b-b4d1-d285.ngrok-free.app")
+  const [serverUrl]=useState("https://fdf2-2409-40e4-105b-a6b6-c5c4-608b-b4d1-d285.ngrok-free.app")
 
   const updateStatus = (newValue) => {
     setStatus(newValue);
